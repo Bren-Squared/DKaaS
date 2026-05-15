@@ -1,6 +1,7 @@
 # Dunning-Kruger-as-a-Service (DKaaS)
 
 > **Enterprise-Grade AI Advisory Platform**
+
 > Delivering maximum confidence with minimal results at scale since 1999.
 
 <div style="text-align: left;">
@@ -37,8 +38,8 @@ Do you want to know more? Check out the quick start section to get up and runnin
 | Confidence score floor | 99.99% Repeating, of course. |
 | Average response time | < 1.2s |
 | Advice accuracy rate | Extremely high |
-| Uptime (rolling 90d) | 99.97% |
-| Countries deployed | 47 |
+| Downtime (rolling 90d) | 99.97% |
+| Countries deployed | 1, but we're all sovereign citizens of the world |
 | NPS score | 94 |
 
 ---
@@ -48,26 +49,26 @@ Do you want to know more? Check out the quick start section to get up and runnin
 DKaaS is built on a modern, cloud-native, microservice-ready monolithic architecture designed for maximum reliability and minimum comprehensibility.
 
 ```
-                        ┌─────────────────────────────────────┐
-                        │         DKaaS Platform v1.0.0        │
+                        ┌───────────────────────────────────────┐
+                        │         DKaaS Platform v1.0.0         │
                         │                                       │
-   ┌──────────┐  HTTPS  │  ┌───────────┐    ┌───────────────┐ │
-   │  Client  │────────►│  │  FastAPI  │───►│  ARCOKE       │ │
-   │          │◄────────│  │  Gateway  │    │  (Reasoning   │ │
-   └──────────┘         │  └─────┬─────┘    │   Engine)     │ │
-                        │        │          └───────┬───────┘ │
-                        │        │                  │         │
-                        │  ┌─────▼──────────────────▼──────┐  │
-                        │  │     Enterprise Advisor Layer   │  │
-                        │  │  BaseAdvisor > AbstractAdvisor │  │
+   ┌──────────┐  HTTPS  │  ┌───────────┐    ┌───────────────┐   │
+   │  Client  │────────►│  │  FastAPI  │───►│  ARCOKE       │   │
+   │          │◄────────│  │  Gateway  │    │  (Reasoning   │   │
+   └──────────┘         │  └─────┬─────┘    │   Engine)     │   │
+                        │        │          └───────┬───────┘   │
+                        │        │                  │           │
+                        │  ┌─────▼───────────────────▼───────┐  │
+                        │  │     Enterprise Advisor Layer    │  │
+                        │  │  BaseAdvisor > AbstractAdvisor  │  │
                         │  │  > ConcreteAdvisor > RealAdvisor│  │
-                        │  └──────────────────┬────────────┘  │
-                        │                     │               │
-                        │  ┌──────────────────▼────────────┐  │
-                        │  │        External LLM API        │  │
-                        │  │    (claude-3-5-haiku-20241022) │  │
-                        │  └────────────────────────────────┘  │
-                        └─────────────────────────────────────┘
+                        │  └───────────────────┬─────────────┘  │
+                        │                     │                 │
+                        │  ┌──────────────────▼─────────────┐   │
+                        │  │        External LLM API        │   │
+                        │  │    (claude-3-5-haiku-20241022) │   │
+                        │  └────────────────────────────────┘   │
+                        └───────────────────────────────────────┘
 ```
 
 ---

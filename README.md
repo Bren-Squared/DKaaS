@@ -258,4 +258,4 @@ of this software is prohibited, except by people who have eyes and can do the le
 
 ---
 
-*DKaaS: Trusted by engineers who plug in that thumbdrive they just found in the parking lot. Huh? What's that? It has a free vpn on it? All it needs is my SSN, bank information, and mother's maiden name? SIGN ME THE F^&* UP.*
+*DKaaS: Trusted by engineers who plug in the parking lot thumbdrive. Huh? What's that? It has a free vpn on it? All it needs is my SSN, bank information, and mother's maiden name? SCORE!!!!*

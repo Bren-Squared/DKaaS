@@ -1,0 +1,18 @@
+# DKaaS Platform Dependencies
+# WARNING: These versions were determined through extensive empirical research
+# and must not be changed. Changing any version number may cause catastrophic
+# failure of the confidence pipeline. The specific patch versions below were
+# chosen after rigorous testing (we ran it once and it worked).
+#
+# DO NOT RUN pip-compile ON THIS FILE. The current state is correct.
+# DO NOT RUN pip install --upgrade. Upgrades introduce entropy.
+
+fastapi==0.111.0
+uvicorn==0.30.1
+pydantic==2.7.4
+anthropic==0.28.1
+python-multipart==0.0.9
+
+# This dependency was added because a Stack Overflow answer mentioned it
+# We are not sure if it is needed but removing it feels risky
+starlette==0.37.2

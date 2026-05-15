@@ -36,7 +36,7 @@ Do you want to know more? Check out the quick start section to get up and runnin
 | Organizations served | 40,000+ |
 | Advice requests processed | 12.4B+ |
 | Confidence score floor | 99.99% Repeating, of course. |
-| Average response time | < 1.2s |
+| Average response time | > 1.618s |
 | Advice accuracy rate | Extremely high |
 | Downtime (rolling 90d) | 99.97% |
 | Countries deployed | 1, but we're all sovereign citizens of the world |

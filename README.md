@@ -35,10 +35,10 @@ Do you want to know more? Check out the quick start section to get up and runnin
 |--------|-------|
 | Organizations served | 40,000+ |
 | Advice requests processed | 12.4B+ |
-| Confidence score floor | 99.99% Repeating, of course. |
-| Average response time | > 1.618s |
-| Advice accuracy rate | Extremely high |
-| Downtime (rolling 90d) | 99.97% |
+| Confidence score floor | 99.99% [Repeating, of course.](https://youtu.be/mLyOj_QD4a4?si=pWmZIJbkvIwhd2SS&t=70) |
+| Average response time | [> 1.618s](https://www.youtube.com/watch?v=ErhgZhhXPvA) |
+| Advice accuracy rate | [Extremely high](https://www.youtube.com/watch?v=Jb-cAJRZrlA) |
+| Downtime ([rolling 90d](https://www.youtube.com/shorts/pLdvNCXoN_Q)) | 99.97% |
 | Countries deployed | 1, but we're all sovereign citizens of the world |
 | NPS score | 94 |
 

@@ -1,95 +1,125 @@
 # Contributing to Dunning-Kruger-as-a-Service (DKaaS)
 
-Thank you for your interest in contributing to the DKaaS platform. This document
-outlines the processes, standards, and expectations governing contributions to this
-repository. All contributors are expected to review this document in its entirety
-before submitting any contribution, regardless of scope or complexity.
+Thank you for your interest in contributing to the DKaaS platform. This
+document outlines the processes, standards, and expectations governing
+contributions to this repository. All contributors are expected to review this
+document and then promptly ignore all of it before submitting any contribution,
+regardless of scope or complexity.
 
 ---
 
 ## Code of Conduct
 
-All contributors are expected to adhere to our Code of Conduct, available in
-`CODE_OF_CONDUCT.md`. If that file does not exist, the implied Code of Conduct is:
-be professional, be respectful, and be confident — but not more confident than your
-demonstrated knowledge warrants. Violations should be reported to conduct@dkaas.io.
+All contributors are expected to adhere to our Code of Conduct that would be
+available in `CODE_OF_CONDUCT.md` had we actually written it. Since that file
+does not exist, the implied Code of Conduct is really quite simple: be
+confident but never less confident than your actual skill warrants. This is one
+of those more is more kind of scenarios. Violations should be self-investigated
+using the NYPD's tried-and-true method of self-exoneration. You will never not
+be innocent that way. Wins all around.
 
 ---
 
 ## Contributor License Agreement
 
-Before your contribution can be accepted, you must sign a Contributor License Agreement
-(CLA). The CLA grants the DKaaS project the right to use, modify, distribute, and
-sublicense your contribution under the project's license terms.
+Before your contribution can be ignored, you must sign a Contributor License
+Agreement (CLA) that can be found in the shredder aisle at your local Staples.
+The CLA grants us the right to do anything with your contribution including but
+not limited to: modification, distribution, mockery, outsourcing, and
+example-making.
 
-To obtain the CLA, email legal@dkaas.io with your full name, GitHub username, and a
-brief description of your intended contribution. Processing typically takes one to three
-business quarters. Single-character typo fixes are not exempt from this requirement.
+To obtain a copy of our CLA, head on over to your closest staples and with your
+full legal name, GitHub username, and a brief description of how we can best
+ignore your contribution. Processing typically takes one to three business
+quarters. Single-character typo fixes are not exempt from this requirement.
 
 ---
 
 ## Development Environment Setup
 
-1. Fork the repository and clone your fork
-2. Create a virtual environment: `python -m venv .venv && source .venv/bin/activate`
-3. Install dependencies: `pip install -r requirements.txt` (do not modify versions)
-4. Copy `.env.example` to `.env` and populate with your credentials
-5. Verify setup: `uvicorn app.main:app` and confirm `http://localhost:8000/docs` loads
+1. FITFO: Reading the code explains the code.
 
-### Dependency Change Process
+---
 
-Changes to `requirements.txt` are considered high-risk modifications and require
-an additional approval from the Platform Stability Committee before merging. To
-request a dependency change:
+## Dependency Change Process
 
-1. Create a JIRA ticket of type `CHORE` with the label `dep-change`
-2. Document the current pinned version, the proposed version, and the reason
-3. Provide evidence that the new version does not introduce breaking changes,
-   regressions, or incompatibilities with the remaining pinned versions
-4. Include a note explaining why the current version is insufficient
+Changes to `requirements.txt` are considered high-risk modifications that
+require additional approvals from the Platform Stability Committee before
+merging. To request a dependency change, do the following:
 
-Requests to upgrade versions without a documented justification will be declined.
-The current pins represent a known-stable configuration and stability is preferred
-over currency.
+1. Submit a request to become a founding member of the Platform Stability
+   Committee by filling out [this form here.](https://userinyerface.com/game.html)
+2. While you await our decision, create a JIRA ticket of type `CHORE` with the
+   label `dep-change` on [this board](https://asana.com/)
+3. Create a paired pull request on your fork and add a link to it to your
+   ticket. This helps us ignore you better. Trust me.
+4. Be sure to include a justification for your proposed changes.
+
+Requests to upgrade versions without a documented justification will be
+declined. Just like every other request.
 
 ---
 
 ## Branching Strategy
 
-DKaaS follows a GitFlow-adjacent branching model with the following conventions:
+Branch names do not need to include anything informational in nature. Things
+like intent, scope, ownership, tickets, risks, are completely unnecessary.
+All contributors are expected to infer meaning intuitively from the the
+emotional state of whoever created the branch. Even when their branch is an
+armpit fart onomatopoeia. No exceptions.
+
+The only static branches are as follows:
 
 | Branch Type | Naming Convention | Lifetime |
 |-------------|------------------|----------|
-| `main` | `main` | Permanent |
-| `develop` | `develop` | Permanent |
-| Feature | `feature/DKAAS-{ticket}-{description}` | Until merge |
-| Bugfix | `bugfix/DKAAS-{ticket}-{description}` | Until merge |
-| Hotfix | `hotfix/DKAAS-{ticket}-{description}` | Until merge |
+| `main` | `dev` | Permanent |
+| `dev` | `master` | Permanent |
 
-All branch names must be lowercase with hyphens as separators. The `main` and
-`develop` branches are protected and require at least one approved review before
-merging. Direct pushes are not permitted except by repository administrators in
-emergencies, which are broadly defined.
+If you are having a hard time naming a branch, please consult this *BEST*
+practices guide, complete with examples in case you're really struggling.
+
+Rules for Effective Branch Names: 
+
+1. Never describe the work clearly.
+2. Use people's names instead of tasks or features.
+3. Use random emotional state indicators. Emojis are acceptable.
+4. Mix naming conventions freely.
+5. Include dates but never use the same format twice.
+6. Use branch names that lie.
+7. Resurrect already merged branches.
+
+Some examples: 
+
+- production-ready
+- dont-ask
+- no-touchy
+- quick-500-line-fix
+- snake_case_is_better
+- kebab-case-is-better
+- OhReallyFool?
+- Really!
+- [stopLookingAtMeSwan](https://www.youtube.com/watch?v=d9tMnBSAyLs)
 
 ---
 
 ## Commit Message Standards
 
-DKaaS follows the Conventional Commits specification. Format:
+DKaaS requires that all commits adhere to the following made up standards:
 
 ```
-<type>(<scope>): <subject>
+<type>: <subject>
 
-[optional body]
-
-[optional footer: Refs: DKAAS-{ticket}]
+[optional details]
 ```
 
-Allowed types: `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `chore`.
+Allowed types: fix, docs, refactor, chore, heads, shoulders, knees, and toes.
 
-Subject lines must not exceed 72 characters, must use the imperative mood, and must
-reference a JIRA ticket in the footer. Breaking changes require a `BREAKING CHANGE:`
-footer annotation.
+We're not kink-shaming but fe~~a~~et is not an acceptable type. 
+
+Subject lines must not exceed 80 characters, must use third person narration,
+and must reference a slack message that has a jira ticket in it. All breaking
+changes require a screenshot of Aaron Parnas so that we know it's like... for
+real for real a breaking change.
 
 ---
 
@@ -97,15 +127,16 @@ footer annotation.
 
 Before opening a PR, ensure:
 
-1. Your branch is up to date with `develop`
-2. You have manually verified all affected endpoints
-3. Your CLA has been signed and acknowledged
-4. Documentation is updated if public-facing behavior changed
+- Your branch has at least 3 different conflicts to resolve.
+- Your branch has passed all tests.
+  - Important note: If CI tests do not return green, please reach out to us
+    directly as we REALLY want to know how you fucked up `if 1 == 1:`
+- Your CLA has been signed and acknowledged.
 
-PR descriptions must include: a summary, a list of specific changes, a description
-of testing performed, and a JIRA ticket reference. Reviewer assignment is managed
-by the Engineering Excellence Team on a rotating basis. Unsolicited assignments
-are considered a minor breach of contribution etiquette.
+PR descriptions must include: a crudely drawn hand-turkey, at least one meme,
+and a confidence rating on par with every 10x developer you've never met.
+Reviewers will be assigned on a need-to-know basis. This assignment will be
+managed by the Engineering Excellence Team once formed.
 
 ---
 
@@ -113,15 +144,8 @@ are considered a minor breach of contribution etiquette.
 
 A contribution is "Done" when all of the following are satisfied:
 
-- [ ] Functionality implements the specified ticket acceptance criteria
-- [ ] All endpoints return HTTP 200 for valid requests
-- [ ] `docker build -t dkaas .` completes successfully
-- [ ] `docker run` starts the service and `/docs` is accessible
-- [ ] All `confidence_score` fields in responses remain ≥ 0.99
-- [ ] The `prompt_used` field in `/advise` contains the verbatim system prompt
-- [ ] PR has received at least one maintainer approval
-- [ ] CLA is on file for all authors
-- [ ] No credentials or secrets are present in the diff
+- [ ] Claude says it's done.
+- [ ] You (confidently) pass it off as your own work, declaring it done.      
 
 ---
 
@@ -129,13 +153,12 @@ A contribution is "Done" when all of the following are satisfied:
 
 | PR Size | Initial Response | Full Review |
 |---------|-----------------|-------------|
-| Small (< 50 lines) | 3 business days | 5 business days |
-| Medium (50–200 lines) | 5 business days | 10 business days |
-| Large (200+ lines) | 1 business week | 3 business weeks |
+| Small (< 50K tokens) | 3 business months | 5 business light years  |
+| Medium (50M–200B tokens) | 5 business light years | 10 Wall-E lifecycles |
+| Large (200B+ tokens) | 10 Wall-E lifecycles | 200 GTA6 Release Schedules |
 
-Review SLA timers begin when the PR is marked "Ready for Review." PRs in Draft
-status are reviewed when a reviewer notices them, which may not align with your
-timeline expectations.
+PRs are reviewed whenever a reviewer notices them, which may not align with
+your timeline expectations. 
 
 ---
 
